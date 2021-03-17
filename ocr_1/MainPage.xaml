@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="ocr_1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ocr_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid RequestedTheme="Default">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Button x:Name="button1" Click="button1_Click" Content="クリックして画像を選べ" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Margin="5,5,5,5"/>
+        <Image x:Name="pic1" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"/>
+        <TextBox x:Name="res1" Grid.Row="2" Grid.Column="1" Background="LightGray" AcceptsReturn="True" TextWrapping="Wrap" />
+        <Button x:Name="button_ocr" Content="OCR" Click="button_ocr_Click" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Margin="5,5,5,5"/>
+        <Button x:Name="button_save" Content="テキスト保存" Click="button_save_Click" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Margin="5,5,5,5"/>
+
+    </Grid>
+</Page>
